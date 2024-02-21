@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: stretch;
+  align-items: center;
+  height: 100%;
+  gap: 2rem;
+  flex: 0 0 0;
+  padding: 2rem 0;
+}
+
+header {
+  display: flex;
+  padding: 4rem;
+  gap: 1rem;
+}

@@ -1,0 +1,24 @@
+:host {
+  @apply bg-teal-200 rounded;
+
+  padding: 1rem;
+  position: relative;
+  height: fit-content;
+  cursor: pointer;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.bubble {
+  @apply rounded-full bg-amber-100;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+  padding: 0.5rem;
+}

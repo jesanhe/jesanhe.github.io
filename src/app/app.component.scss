@@ -8,16 +8,22 @@
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-items: stretch;
   align-items: center;
   height: 100%;
-  gap: 2rem;
+  gap: 1rem;
   flex: 0 0 0;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 header {
+  display: flex;
+  padding: 4rem;
+  gap: 1rem;
+}
+
+nav {
   display: flex;
   padding: 4rem;
   gap: 1rem;

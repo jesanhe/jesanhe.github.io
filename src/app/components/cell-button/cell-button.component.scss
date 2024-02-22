@@ -1,16 +1,19 @@
 :host {
   @apply bg-teal-200 rounded;
 
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   position: relative;
   height: fit-content;
   cursor: pointer;
+
+  &.invert-counter {
+    @apply bg-red-200;
+  }
 }
 
 span {
-  display: flex;
-  justify-content: center;
   text-transform: uppercase;
+  display: block;
 }
 
 .bubble {

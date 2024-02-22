@@ -1,4 +1,30 @@
+<nav>
+  <button
+    class="bg-gray-200 rounded border border-solid border-gray-700 p-2"
+    (click)="previousSample()"
+  >
+    <
+  </button>
+
+  <span class="bg-gray-50 rounded border border-solid border-gray-700 p-2">{{
+    currentSample$ | async
+  }}</span>
+
+  <button
+    class="bg-gray-200 rounded border border-solid border-gray-700 p-2"
+    (click)="nextSample()"
+  >
+    >
+  </button>
+</nav>
+
 <header>
+  <label class="flex items-center gap-2">
+    <input type="checkbox" [(ngModel)]="invertCounter" />
+
+    Restar
+  </label>
+
   <span class="bg-violet-100 rounded p-2"> Total: </span>
   <span class="bg-amber-100 rounded p-2"> {{ total$ | async }} </span>
 
@@ -7,16 +33,44 @@
   </button>
 </header>
 
-<main class="max-w-screen-xl">
-  <app-cell-button cellName="heterofilo"></app-cell-button>
-  <app-cell-button cellName="plaqueta"></app-cell-button>
-  <app-cell-button cellName="leucocitozoon"></app-cell-button>
+<main class="max-w-screen-xl w-full">
+  <!-- <app-cell-button cellName="heterofilo"></app-cell-button> -->
+  <app-cell-button
+    cellName="heterofilo"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
+  <app-cell-button
+    cellName="plaqueta"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
+  <app-cell-button
+    cellName="leucocitozoon"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
 
-  <app-cell-button cellName="linfocito"></app-cell-button>
-  <app-cell-button cellName="bas"></app-cell-button>
-  <app-cell-button cellName="plasmodium"></app-cell-button>
+  <app-cell-button
+    cellName="linfocito"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
+  <app-cell-button
+    cellName="bas"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
+  <app-cell-button
+    cellName="plasmodium"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
 
-  <app-cell-button cellName="monocito"></app-cell-button>
-  <app-cell-button cellName="eos"></app-cell-button>
-  <app-cell-button cellName="haemop"></app-cell-button>
+  <app-cell-button
+    cellName="monocito"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
+  <app-cell-button
+    cellName="eos"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
+  <app-cell-button
+    cellName="haemop"
+    [invertCounter]="invertCounter"
+  ></app-cell-button>
 </main>

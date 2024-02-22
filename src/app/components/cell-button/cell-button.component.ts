@@ -1,7 +1,13 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  HostBinding,
+  HostListener,
+  Input,
+  OnInit,
+} from '@angular/core';
 import {
   CellCountRepository,
-  cellCountProps,
+  CellCountProps,
 } from '../../state/cell-count.repository';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -14,12 +20,21 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cell-button.component.scss',
 })
 export class CellButtonComponent implements OnInit {
-  @Input() cellName?: keyof cellCountProps;
+  @Input() cellName?: keyof CellCountProps;
+  @Input() invertCounter: boolean = false;
+
+  @HostBinding('class.invert-counter') get invertCounterClass() {
+    return this.invertCounter;
+  }
 
   @HostListener('click')
   handleClick() {
     if (this.cellName) {
-      this.cellCounRepo.increaseCellCount(this.cellName);
+      if (!this.invertCounter) {
+        this.cellCounRepo.increaseCellCount(this.cellName);
+      } else {
+        this.cellCounRepo.decreaseCellCount(this.cellName);
+      }
     }
   }
 

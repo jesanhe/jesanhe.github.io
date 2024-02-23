@@ -10,6 +10,14 @@
       "url": "http://localhost:4200/"
     },
     {
+      "name": "ng serve (attach)",
+      "type": "chrome",
+      "request": "attach",
+      "preLaunchTask": "npm: start",
+      "url": "http://localhost:4200/",
+      "program":"/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+    },
+    {
       "name": "ng test",
       "type": "chrome",
       "request": "launch",

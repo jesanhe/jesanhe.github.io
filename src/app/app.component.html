@@ -1,22 +1,4 @@
-<nav>
-  <button
-    class="bg-gray-200 rounded border border-solid border-gray-700 p-2"
-    (click)="previousSample()"
-  >
-    <
-  </button>
-
-  <span class="bg-gray-50 rounded border border-solid border-gray-700 p-2">{{
-    currentSample$ | async
-  }}</span>
-
-  <button
-    class="bg-gray-200 rounded border border-solid border-gray-700 p-2"
-    (click)="nextSample()"
-  >
-    >
-  </button>
-</nav>
+<app-sample-selector></app-sample-selector>
 
 <header>
   <label class="flex items-center gap-2">

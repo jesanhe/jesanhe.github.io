@@ -1,4 +1,6 @@
 :host {
+  @apply max-w-screen-lg;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +25,4 @@ header {
   gap: 1rem;
 }
 
-nav {
-  display: flex;
-  padding: 4rem;
-  gap: 1rem;
-}
+

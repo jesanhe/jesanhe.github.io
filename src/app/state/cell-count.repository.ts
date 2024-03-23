@@ -20,10 +20,10 @@ export interface CellCountProps {
   plaqueta: number;
   leucocitozoon: number;
   linfocito: number;
-  bas: number;
+  bas_eos: number;
   plasmodium: number;
   monocito: number;
-  eos: number;
+  campos: number;
   haemop: number;
   total: number;
 }
@@ -147,10 +147,10 @@ export class CellCountRepository {
       plaqueta: 0,
       leucocitozoon: 0,
       linfocito: 0,
-      bas: 0,
+      bas_eos: 0,
       plasmodium: 0,
       monocito: 0,
-      eos: 0,
+      campos: 0,
       haemop: 0,
       total: 0,
     };
